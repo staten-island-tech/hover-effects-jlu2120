@@ -16,16 +16,17 @@ body {
           box-sizing: border-box;
 }
 
-.btn {
+.btn-1 {
   width: 20vw;
   height: 6vw;
-  position: static;
+  position: -webkit-sticky;
+  position: sticky;
   left: 50vw;
   top: 50vh;
   -webkit-transform: translate(-50%, -80%);
           transform: translate(-50%, -80%);
   font-family: 'Varela Round', sans-serif;
-  font-size: 3.5vw;
+  font-size: 3vw;
   letter-spacing: 0.1em;
   color: #e8e8e8;
   border: none;
@@ -38,9 +39,12 @@ body {
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.btn:hover {
+.btn-1:hover {
   font-size: 2.05vw;
   -webkit-box-shadow: 0.2vw 0.2vw 0 black;
           box-shadow: 0.2vw 0.2vw 0 black;
@@ -55,106 +59,201 @@ body {
           box-sizing: border-box;
 }
 
-.mario {
-  height: 20rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  border-radius: 50%;
+body, html {
+  height: 100%;
 }
 
-.mario:hover {
-  border-radius: 0;
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-}
-
-html,
 body {
-  font-size: 62.5%;
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.text-effect {
-  background-image: url(./images/rainbow.png);
-  background-position: center;
-  color: transparent;
-  font-size: 8rem;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.container {
+  width: auto;
+  margin: auto;
 }
 
-.text-effect:hover {
-  -webkit-transform: skewY(-10deg);
-          transform: skewY(-10deg);
-  letter-spacing: 3rem;
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 100;
 }
 
-html,
-body {
-  font-size: 62.5%;
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.btn-2 {
+  position: -webkit-sticky;
+  position: sticky;
+  letter-spacing: 0.25em;
+  margin: 0 auto;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  outline: none;
+  font-size: 28px;
+  color: #333333;
 }
 
-.mario-parent {
-  width: 60rem;
-  height: 40rem;
-}
-
-.mario-gallery {
-  margin: 3rem;
-  position: relative;
-}
-
-.mar-photo {
+.btn-2::after, .btn-2::before {
+  content: "";
   position: absolute;
-  height: 20rem;
-  -webkit-box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.4);
-          box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.4);
-  outline-offset: 1rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  height: 100%;
+  width: 50%;
+  -webkit-transform: skewX(30deg);
+          transform: skewX(30deg);
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -2;
 }
 
-.mar-photo:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-  -webkit-box-shadow: 0 3rem 1rem rgba(0, 0, 0, 0.4);
-          box-shadow: 0 3rem 1rem rgba(0, 0, 0, 0.4);
-  outline: 1rem solid #ff5722;
-  z-index: 2;
+.btn-2::before {
+  background-color: #ffff00;
+  top: -1rem;
+  left: 0rem;
 }
 
-.mario-gallery:hover .mar-photo:not(:hover) {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-  opacity: 0.3;
+.btn-2::after {
+  background-color: #8a19ff;
+  top: 1rem;
+  left: 8rem;
 }
 
-.mar-photo-1 {
-  top: 10rem;
-  left: 15%;
+.btn-2:hover::before, .btn-2:hover::after {
+  top: 0;
+  -webkit-transform: skewx(0deg);
+          transform: skewx(0deg);
 }
 
-.mar-photo-2 {
-  top: 2rem;
+.btn-2:hover::after {
+  left: 0rem;
+}
+
+.btn-2:hover::before {
+  left: 8.75rem;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50%;
   right: 0;
+  left: 0;
+  display: block;
+  width: 240px;
+  padding: 40px;
+  margin: 0 auto;
+  border: 0;
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-box-shadow: 0 10px 20px -5px #94a6af;
+          box-shadow: 0 10px 20px -5px #94a6af;
+  overflow: hidden;
 }
 
-.mar-photo-3 {
-  top: -2rem;
+button:before, button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
 }
 
+button:before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background-image: url("https://cdn.pixabay.com/photo/2020/09/07/11/57/stairway-5551641_1280.jpg");
+  background-size: cover;
+  -webkit-transition: 0.3s ease transform;
+  transition: 0.3s ease transform;
+  z-index: 1;
+}
+
+button:after {
+  background-color: #000;
+  opacity: 0.16;
+  z-index: 2;
+}
+
+button div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
+button div:before, button div:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  color: #fff;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  padding: 25px 0;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+
+button div:before {
+  content: "HOVER";
+  letter-spacing: 0;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+button div:after {
+  content: "YEAH !";
+  letter-spacing: -10px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+
+button:hover:before {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+button:hover div:before {
+  letter-spacing: 3px;
+  opacity: 0;
+  -webkit-transform: scale(4);
+          transform: scale(4);
+}
+
+button:hover div:after {
+  letter-spacing: 0;
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 html,
 body {
   font-size: 62.5%;
@@ -164,39 +263,65 @@ body {
           box-sizing: border-box;
 }
 
-.explore {
-  height: 30rem;
-  position: relative;
+.btn-4 {
+  cursor: pointer;
+  position: -webkit-sticky;
+  position: sticky;
+  padding: 10px 20px;
+  background: white;
+  font-size: 28px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
-.explore-picture {
-  height: 30rem;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.explore-header {
-  font-size: 3rem;
-  opacity: 1;
-  color: white;
+.btn-4:after, .btn-4:before {
+  content: " ";
+  width: 10px;
+  height: 10px;
   position: absolute;
-  top: 110%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  text-transform: uppercase;
+  border: 0px solid #fff;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
-.explore:hover .explore-picture {
-  -webkit-filter: grayscale(90%);
-          filter: grayscale(90%);
+.btn-4:after {
+  top: -1px;
+  left: -1px;
+  border-top: 5px solid black;
+  border-left: 5px solid black;
 }
 
-.explore:hover .explore-header {
-  opacity: 1;
-  top: 50%;
+.btn-4:before {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+}
+
+.btn-4:hover {
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.btn-4:hover:before, .btn-4:hover:after {
+  width: 100%;
+  height: 100%;
+}
+
+.data-container {
+  background: white;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container {

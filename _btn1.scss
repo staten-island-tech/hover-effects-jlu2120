@@ -1,14 +1,14 @@
 @import "_variables.scss";
 
-.btn {
+.btn-1 {
     width: 20vw;
     height: 6vw;
-    position: static;
+    position: sticky;
     left: 50vw;
     top: 50vh;
     transform: translate(-50%,-80%);
     font-family: 'Varela Round', sans-serif;
-    font-size: 3.5vw;
+    font-size: 3vw;
     letter-spacing: 0.1em;
     color: #e8e8e8;
     border: none;
@@ -19,10 +19,10 @@
     box-shadow: 1vw 1vw 0 black;
     cursor: pointer;
     transition: all 0.3s ease;
+    align-items: center;
     
     &:hover {
       font-size: 2.05vw;
       box-shadow: 0.2vw 0.2vw 0 black;
     }
   }
-  
