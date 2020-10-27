@@ -265,8 +265,7 @@ body {
 
 .btn-4 {
   cursor: pointer;
-  position: -webkit-sticky;
-  position: sticky;
+  position: absolute;
   padding: 10px 20px;
   background: white;
   font-size: 28px;
@@ -322,6 +321,46 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrap {
+  width: 50%;
+  margin-left: 25%;
+  background-color: #ccc;
+  height: 250px;
+  text-align: center;
+  border: 5px solid #336E7B;
+}
+
+.slide {
+  position: static;
+  color: #fff;
+  line-height: 250px;
+  text-decoration: none;
+  border-radius: 5em;
+  padding: 15px 50px;
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #336E7B), color-stop(50%, #E26A6A));
+  background: linear-gradient(to left, #336E7B 50%, #E26A6A 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.slide:hover {
+  background-position: right bottom;
 }
 
 .container {
